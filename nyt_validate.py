@@ -14,7 +14,7 @@ def validateXML(path):
                 fname = os.path.join(root, file)
                 try:
                     tree = objectify.parse(open(fname, 'rb'))
-                    print(dtd.validate(tree))
+                    #print(dtd.validate(tree))
                 except etree.XMLSyntaxError as err:
                     print(err)
 
