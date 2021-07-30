@@ -6,6 +6,7 @@ from lxml import etree, objectify
  # and the files 'nitf-3-3.dtd' 'xhtml-ruby-1.mod' are in working directory
 
 def validateXML(path):
+    # parser = etree.XMLParser(dtd_validation=True, no_network=True)
     dtd = etree.DTD(open('nitf-3-3.dtd', 'rb'))
     for root, dirs, files in os.walk(path):
         for file in files:
